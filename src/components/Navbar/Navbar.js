@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <Container>
             <Left>
-                <Logo> Anda </Logo>
+                <Logo/>
             </Left>
             <Right>
                 <Menu>

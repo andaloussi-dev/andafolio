@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import logo from "../../assets/images/logo.svg";
 
 export const Container = styled.div`
     padding: 0 var(--gap-l);
@@ -7,13 +8,10 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
 `;
-export const Logo = styled.div`
-    font-size: var(--fz-heading);
-    font-family: var(--font-sans);
-    color: var(--dark-blue);
-    font-weight: 900;
-    text-transform: uppercase;
-
+export const Logo = styled.img.attrs({ src: logo })`
+    padding: 0 var(--gap-l);
+    width: 50px;
+    filter: invert(79%) sepia(35%) saturate(575%) hue-rotate(107deg) brightness(105%) contrast(102%);
 `;
 
 export const Left = styled.div`
@@ -35,20 +33,23 @@ export const Menu = styled.div`
     align-items: center;
     font-family: var(--font-mono);
     font-size: var(--fz-s);
-    color: var(--dark-blue);
+    color: var(--white);
     transition: var(--transition);
 `;
 
 export const ListItem = styled.a`
     padding: 0 var(--gap);
-    cursor: pointer;
+    cursor: pointer; 
+    &:hover {
+        color: var(--green);
+    }
 `;
 
 
 export const Button = styled.button`
-    color: var(--light-blue);
+    color: var(--green);
     background-color: transparent;
-    border: 1px solid var(--violet);
+    border: 1px solid var(--green);
     font-weight: 900;
     border-radius: var(--border-radius);
     padding: 0.75rem 1rem;

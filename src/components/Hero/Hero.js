@@ -1,9 +1,10 @@
 import React from 'react'
-import { Container, Title, Button, Desc, Name , SubTitle, Wrapper} from './HeroStyles'
+import { Container, Title, Button, Desc, Name , SubTitle, Wrapper , Circle} from './HeroStyles'
 
 const Hero = () => {
   return (
     <Container>
+      <Circle/>
       <Wrapper>
       <Name>Hi, my name is</Name>
       <Title>Mohamed Andaloussi.</Title>

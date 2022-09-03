@@ -17,6 +17,8 @@ const variables = css`
     --pink: #f57dff;
     --blue: #57cbff;
 
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
 
     --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,
       sans-serif;
@@ -51,6 +53,21 @@ const variables = css`
     --ham-after: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     --ham-after-active: bottom 0.1s ease-out,
       transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+
+      @keyframes spin {
+      0% {
+        --rotate: 0deg;
+      }
+      100% {
+        --rotate: 360deg;
+      }
+
+      @property --rotate {
+      syntax: "<angle>";
+      initial-value: 132deg;
+      inherits: false;
+      }
+}
   }
 `;
 
